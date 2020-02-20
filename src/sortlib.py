@@ -9,8 +9,13 @@ def ratio_one(libraries):
 def ratio_two(libraries):
     ratioArray = list()
     for library in libraries:
+<<<<<<< HEAD
         ratioArray.append((library["signup_days"] * library["book_count"] * library["books_per_day"]))
     return ratioArray   
+=======
+        ratioArray.append((library["signup_days"] * (library["book_count"]) * library["books_per_day"]))
+    return ratioArray
+>>>>>>> c5a84250fc75f892466d1c5e8ea197fbef3544f1
 
 def ratio_three(libraries):
     ratioArray = list()
