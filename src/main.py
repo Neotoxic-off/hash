@@ -13,14 +13,20 @@ libs = []
 ratio = sortlib.ratio_one(data["libraries"])
 libraries = sortlib.ratioArraySort(ratio, data["libraries"])
 libs.append(sortlib.duplicateArraySort(libraries))
+ddouble = sortlib.ratio_doubleone(libraries)
+libs.append(sortlib.duplicateArraySort(ddouble))
 
 ratio = sortlib.ratio_two(data["libraries"])
 libraries = sortlib.ratioArraySort(ratio, data["libraries"])
 libs.append(sortlib.duplicateArraySort(libraries))
+ddouble = sortlib.ratio_doubleone(libraries)
+libs.append(sortlib.duplicateArraySort(ddouble))
 
 ratio = sortlib.ratio_three(data["libraries"])
 libraries = sortlib.ratioArraySort(ratio, data["libraries"])
 libs.append(sortlib.duplicateArraySort(libraries))
+ddouble = sortlib.ratio_doubleone(libraries)
+libs.append(sortlib.duplicateArraySort(ddouble))
 
 best_score = -1
 best_library = None

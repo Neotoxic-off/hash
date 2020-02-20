@@ -9,13 +9,8 @@ def ratio_one(libraries):
 def ratio_two(libraries):
     ratioArray = list()
     for library in libraries:
-<<<<<<< HEAD
         ratioArray.append((library["signup_days"] * library["book_count"] * library["books_per_day"]))
-    return ratioArray   
-=======
-        ratioArray.append((library["signup_days"] * (library["book_count"]) * library["books_per_day"]))
     return ratioArray
->>>>>>> c5a84250fc75f892466d1c5e8ea197fbef3544f1
 
 def ratio_three(libraries):
     ratioArray = list()
@@ -26,14 +21,8 @@ def ratio_three(libraries):
 def ratio_doubleone(libraries):
     ratioArray = list()
     for i in range(len(libraries)):
-        library = libraries[i]
-        ratioArray.append(sum(library["books"]) * i / library["books_per_day"])
-    return ratioArray
-
-def ratio_three(libraries):
-    ratioArray = list()
-    for library in libraries:
-        ratioArray.append((library["signup_days"] / (library["book_count"] * library["books_per_day"])))
+        #library = libraries[i]
+        ratioArray.append(sum(libraries[i]["books"]) * i / libraries[i]["books_per_day"])
     return ratioArray
 
 def ratioArraySort(ratioArray, libraries):
@@ -62,6 +51,7 @@ def librariesScore(libraries, booksScore, deadline):
 def duplicateArraySort(libraries):
     signedUpBooks = list()
     newArray = list()
+
     for library in libraries:
         booksList = list()
         for book in library["books"]:
