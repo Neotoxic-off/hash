@@ -1,7 +1,7 @@
 # hash
 
 
-## Solve libs problems
+## DUALITY
 ```
 ./src/solver
 ```
