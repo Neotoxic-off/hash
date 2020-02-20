@@ -7,9 +7,24 @@ import sys
 if (len(sys.argv) != 2):
     quit()
 data = load_file(sys.argv[1])
+
+libs = []
+
 ratio = sortlib.ratio_one(data["libraries"])
 libraries = sortlib.ratioArraySort(ratio, data["libraries"])
-libraries = sortlib.duplicateArraySort(libraries)
+libs.append(sortlib.duplicateArraySort(libraries))
+
+ratio = sortlib.ratio_two(data["libraries"])
+libraries = sortlib.ratioArraySort(ratio, data["libraries"])
+libs.append(sortlib.duplicateArraySort(libraries))
+
+best_score = -1
+best_library = None
+for lib in libs:
+    score = sortlib.librariesScore(lib, data["book_scores"], data["days"])
+    if score > best_score:
+        best_library = lib
+        best_score = score
 
 def display_output(libraries):
     print(len(libraries))
@@ -20,4 +35,4 @@ def display_output(libraries):
 
 #print(len(data["libraries"]))
 #print(len(libraries))
-display_output(libraries)
+display_output(best_library)
