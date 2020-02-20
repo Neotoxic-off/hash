@@ -1,3 +1,7 @@
 # hash
 
-HIHI PREMIER PUSH :D
+
+## Solve libs problems
+```
+./src/solver
+```
