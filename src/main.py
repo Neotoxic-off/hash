@@ -7,8 +7,8 @@ import sys
 if (len(sys.argv) != 2):
     quit()
 data = load_file(sys.argv[1])
-libraries = sortlib.ratio(data["libraries"])
-libraries = sortlib.ratioArraySort(libraries, data["libraries"])
+ratio = sortlib.ratio_one(data["libraries"])
+libraries = sortlib.ratioArraySort(ratio, data["libraries"])
 libraries = sortlib.duplicateArraySort(libraries)
 
 def display_output(libraries):
