@@ -7,15 +7,17 @@ import sys
 if (len(sys.argv) != 2):
     quit()
 data = load_file(sys.argv[1])
-ratioArray = sortlib.ratio(data["libraries"])
-print(ratioArray)
-ratioArray = sortlib.ratioArraySort(ratioArray, data["libraries"])
-print(ratioArray)
+libraries = sortlib.ratio(data["libraries"])
+libraries = sortlib.ratioArraySort(libraries, data["libraries"])
+libraries = sortlib.duplicateArraySort(libraries)
 
 def display_output(libraries):
     print(len(libraries))
     for library in libraries:
+        booksList = sorted(library["books"], reverse=True)
         print(f"{library['id']} {len(library['books'])}")
-        print(" ".join(map(lambda book: str(book), library["books"])))
+        print(" ".join(map(lambda book: str(book), booksList)))
 
-display_output(ratioArray);
+#print(len(data["libraries"]))
+#print(len(libraries))
+display_output(libraries)

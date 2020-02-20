@@ -1,0 +1,14 @@
+#!/bin/bash
+
+main()
+{
+    ./main.py ../datasets/a_example.txt > result/a_solve.txt
+    ./main.py ../datasets/b_read_on.txt > result/b_solve.txt
+    ./main.py ../datasets/c_incunabula.txt > result/c_solve.txt
+    ./main.py ../datasets/d_tough_choices.txt > result/d_solve.txt
+    ./main.py ../datasets/e_so_many_books.txt > result/e_solve.txt
+    ./main.py ../datasets/f_libraries_of_the_world.txt > result/f_solve.txt
+    zip result/source.zip ./*.py
+}
+
+main
