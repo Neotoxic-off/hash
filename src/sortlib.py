@@ -3,7 +3,7 @@
 def ratio(libraries):
     ratioArray = list()
     for library in libraries:
-        ratioArray.append(sum(library["books"]) / (library["book_count"] * library["books_per_day"]))
+        ratioArray.append((sum(library["books"]) * library["signup_days"]) / (library["book_count"] * library["books_per_day"]))
     return ratioArray
 
 def ratioArraySort(ratioArray, libraries):
