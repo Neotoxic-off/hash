@@ -9,8 +9,21 @@ def ratio_one(libraries):
 def ratio_two(libraries):
     ratioArray = list()
     for library in libraries:
-        ratioArray.append((library["signup_days"] * (library["book_count"]) * library["books_per_day"]))
+        ratioArray.append((library["signup_days"] * library["book_count"] * library["books_per_day"]))
     return ratioArray   
+
+def ratio_three(libraries):
+    ratioArray = list()
+    for library in libraries:
+        ratioArray.append(library["signup_days"] / (library["book_count"] * library["books_per_day"]))
+    return ratioArray
+
+def ratio_doubleone(libraries):
+    ratioArray = list()
+    for i in range(len(libraries)):
+        library = libraries[i]
+        ratioArray.append(sum(library["books"]) * i / library["books_per_day"])
+    return ratioArray
 
 def ratioArraySort(ratioArray, libraries):
     newratioArray = sorted(libraries, key=lambda library: ratioArray[library["id"]])
