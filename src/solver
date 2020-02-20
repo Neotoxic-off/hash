@@ -2,6 +2,7 @@
 
 main()
 {
+    mkdir result
     ./main.py ../datasets/a_example.txt > result/a_solve.txt
     ./main.py ../datasets/b_read_on.txt > result/b_solve.txt
     ./main.py ../datasets/c_incunabula.txt > result/c_solve.txt
