@@ -21,7 +21,7 @@ def librariesScore(libraries, booksScore, deadline):
     total_days = 0
     for library in libraries:
         if total_days + library["signup_days"] <= deadline:
-            total_days += library["singup_days"]
+            total_days += library["signup_days"]
             total += sum([booksScore[book] for book in library["books"]])
         else:
             break
