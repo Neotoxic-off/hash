@@ -1,3 +1,5 @@
 # hash
 
-HIHI PREMIER PUSH :D
+```
+./solver
+```
