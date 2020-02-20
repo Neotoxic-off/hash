@@ -18,6 +18,10 @@ ratio = sortlib.ratio_two(data["libraries"])
 libraries = sortlib.ratioArraySort(ratio, data["libraries"])
 libs.append(sortlib.duplicateArraySort(libraries))
 
+ratio = sortlib.ratio_three(data["libraries"])
+libraries = sortlib.ratioArraySort(ratio, data["libraries"])
+libs.append(sortlib.duplicateArraySort(libraries))
+
 best_score = -1
 best_library = None
 for lib in libs:
