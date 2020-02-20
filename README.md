@@ -1,5 +1,7 @@
 # hash
 
+
+## Solve libs problems
 ```
-./solver
+./src/solver
 ```
