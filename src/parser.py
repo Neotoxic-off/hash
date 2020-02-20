@@ -1,5 +1,3 @@
-from json import dumps
-
 def load_file(filepath: str):
     try:
         with open(filepath, 'r') as h:
